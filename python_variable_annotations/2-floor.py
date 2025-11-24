@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
 import math
+from typing import Any
 
-def floor(n):
+
+def floor(n: float) -> int:
     """
-    Renvoie le plancher (floor) du nombre n.
+    Returns le plancher d'un flotteur sous forme d'entier.
 
     Args:
-        n: Le nombre entier ou flottant dont on veut le plancher.
+        n (float): Le numéro flottant au sol.
 
     Returns:
-        int: Le plus grand entier inférieur ou égal à n.
+        int: La valeur entière plancher du float.
     """
-    # Utilise directement math.floor pour obtenir le plancher
     return math.floor(n)
+
