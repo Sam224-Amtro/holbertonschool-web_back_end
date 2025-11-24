@@ -1,0 +1,1 @@
+Welcome to the Projet python_variable_annotations
