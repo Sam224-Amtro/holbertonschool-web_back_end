@@ -13,4 +13,3 @@ def concat(str1: str, str2: str) -> str:
         str: Les deux chaînes concaténées.
     """
     return str1 + str2
-
