@@ -2,7 +2,6 @@
 import math
 from typing import Any
 
-
 def floor(n: float) -> int:
     """
     Returns le plancher d'un flotteur sous forme d'entier.
@@ -14,4 +13,3 @@ def floor(n: float) -> int:
         int: La valeur entière plancher du float.
     """
     return math.floor(n)
-
