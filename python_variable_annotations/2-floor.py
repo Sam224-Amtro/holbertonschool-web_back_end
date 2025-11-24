@@ -5,6 +5,7 @@ Annotations pour une fonction qui renvoie le plancher d'un nombre.
 import math
 from typing import Any
 
+
 def floor(n: float) -> int:
     """
     Returns le plancher d'un flotteur sous forme d'entier.
