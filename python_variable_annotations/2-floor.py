@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
 from math import floor as math_floor
-from typing import Callable
-
 
 def floor(n: float) -> int:
     """
-    Renvoie le plancher du float donné.
+    Renvoie le plancher (floor) du nombre flottant donné.
 
     Args:
-    n (float): le numéro flottant à plancher.
+        n (float): le nombre flottant dont on veut le plancher.
 
-    Retours:
-    int: Le plus grand entier inférieur ou égal à n.
+    Returns:
+        int: Le plus grand entier inférieur ou égal à n.
     """
     return math_floor(n)
+
