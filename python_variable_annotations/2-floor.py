@@ -3,6 +3,7 @@
 from math import floor as math_floor
 from typing import Callable
 
+
 def floor(n: float) -> int:
     """
     Renvoie le plancher du float donné.
