@@ -3,6 +3,7 @@
 Ce module contient la fonction annotée par type to_str.
 """
 
+
 def to_str(n: float) -> str:
     """
     Convertit un float en sa représentation sous forme de chaîne.
