@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Liste des nombres flottants."""
 from typing import List
 
 
