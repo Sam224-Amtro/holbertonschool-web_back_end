@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 from math import floor as math_floor
 from typing import Callable
 
