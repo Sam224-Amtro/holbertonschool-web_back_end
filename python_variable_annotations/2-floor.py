@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from math import floor as math_floor
 
+
 def floor(n: float) -> int:
     """
     Renvoie le plancher (floor) du nombre flottant donné.
@@ -12,4 +13,3 @@ def floor(n: float) -> int:
         int: Le plus grand entier inférieur ou égal à n.
     """
     return math_floor(n)
-
