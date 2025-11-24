@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+"""
+Annotations pour une fonction qui renvoie le plancher d'un nombre.
+"""
 import math
 from typing import Any
 
