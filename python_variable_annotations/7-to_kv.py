@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """Fonction qui convertit une clé et une valeur en un tuple."""
-
 from typing import Union, Tuple
 
 def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
