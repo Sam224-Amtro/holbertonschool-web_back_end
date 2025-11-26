@@ -5,6 +5,7 @@ Module pour l'exécution concurrente de tâches asynchrones avec des délais al�
 import asyncio
 from typing import List
 
+
 # On importe la fonction wait_random depuis le module 0-basic_async_syntax
 wait_random = __import__('0-basic_async_syntax').wait_random
 
