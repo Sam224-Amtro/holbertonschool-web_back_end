@@ -2,6 +2,7 @@
 """
 Module pour l'exécution concurrente de tâches asynchrones avec des délais aléatoires.
 """
+
 import asyncio
 from typing import List
 
