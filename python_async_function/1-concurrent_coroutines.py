@@ -2,31 +2,43 @@
 """
 Module pour l'exécution concurrente de tâches asynchrones avec des délais aléatoires.
 """
-
 import asyncio
 from typing import List
+from random import uniform
 
+async def wait_random(max_delay: int) -> float:
+    """
+    Attend un délai aléatoire compris entre 0 et max_delay secondes.
 
-# On importe la fonction wait_random depuis le module 0-basic_async_syntax
-wait_random = __import__('0-basic_async_syntax').wait_random
+    Args:
+        max_delay (int): délai maximum en secondes
 
+    Returns:
+        float: le délai utilisé
+    """
+    delay = uniform(0, max_delay)
+    await asyncio.sleep(delay)
+    return delay
 
 async def wait_n(n: int, max_delay: int) -> List[float]:
     """
-    Lance wait_random n fois et retourne la liste des délais.
+    Lance wait_random n fois de manière concurrente et retourne
+    la liste des délais obtenus dans l'ordre d'achèvement.
 
     Args:
-        n (int): Nombre de fois que wait_random doit être exécuté
-        max_delay (int): Délai maximum pour chaque appel à wait_random
+        n (int): nombre d'appels à wait_random
+        max_delay (int): délai max pour chaque appel
 
     Returns:
-        List[float]: Liste des délais obtenus, triée par ordre croissant
+        List[float]: liste des délais obtenus
     """
-    # Crée une liste de tâches asynchrones
+    # Crée n coroutines wait_random
     tasks = [wait_random(max_delay) for _ in range(n)]
 
-    # Exécute toutes les tâches simultanément et attend qu'elles se terminent
-    delays = await asyncio.gather(*tasks)
+    # asyncio.as_completed renvoie les résultats au fur et à mesure
+    results = []
+    for coro in asyncio.as_completed(tasks):
+        result = await coro
+        results.append(result)
 
-    # Retourne la liste des délais triée par ordre croissant
-    return sorted(delays)
+    return results
