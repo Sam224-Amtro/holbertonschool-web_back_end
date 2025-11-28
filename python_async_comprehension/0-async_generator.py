@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" Exécutons plusieurs coroutines en même temps avec async """
+"""Générateur asynchrone"""
 import asyncio
 import random
 
