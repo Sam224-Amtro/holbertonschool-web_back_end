@@ -3,11 +3,11 @@
 
 import asyncio
 import random
-import typing
+from typing import AsyncGenerator
 
 
-async def async_generator() -> typing.AsyncGenerator[float, None]:
-    """ Generate a random number every second """
+async def async_generator() -> AsyncGenerator[float, None]:
+    """Generate a random number every second."""
     for _ in range(10):
         await asyncio.sleep(1)
         yield random.uniform(0, 10)
