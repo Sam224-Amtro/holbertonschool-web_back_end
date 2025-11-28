@@ -7,7 +7,7 @@ import random   # Permet de générer des nombres aléatoires.
 import typing   # Sert ici à annoter le type retourné par le générateur.
 
 
-async def async_generator() -> typing.Generator[float, None, None]:  # type: ignore
+async def async_generator() -> typing.Generator[float, None, None]: #type: ignore
     """
     Générateur asynchrone qui produit un nombre aléatoire entre 0 et 10
     toutes les secondes, pendant 10 itérations.
@@ -16,4 +16,5 @@ async def async_generator() -> typing.Generator[float, None, None]:  # type: ign
         # Pause asynchrone d'une seconde (n'interrompt pas l'exécution
         # globale du programme).
         await asyncio.sleep(1)
-        yield random.uniform(0, 10)  # Produit un nombre aléatoire entre 0 et 10.
+        # Produit un nombre aléatoire entre 0 et 10.
+        yield random.uniform(0, 10)
